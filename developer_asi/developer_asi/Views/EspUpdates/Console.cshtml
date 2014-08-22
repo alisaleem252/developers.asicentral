@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title> ASI Developers - Developer Console </title>
+		<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+ 		<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/espupdates/developers_scripts.js")"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Images/favicon/ESPS.ico")">
+
+        <link href="@Url.Content("~/Content/prettify.css")" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+ 		<script type="text/javascript" src="@Url.Content("~/Scripts/prettify.js")"></script>
+ 		<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.blockUI.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/vkbeautify.js")"></script>
+	</head>
+	<body>
+		<form name="form1" method="post" id="form1">
+			<div id="ctl04_MainZone" class="mainWrapper">
+				<div id="ctl04_Module_87147" class="asiModule AppToolbarLite" ismodule="True">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<a href="/" class="brand"><strong>asi</strong>developers</a>
+                                <div id="menulist"></div>
+								<ul class="nav support pull-right">
+									<li><span id="ctl04_ctl00_lblSupport">Product Support (800) 546-1350, option 2</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ctl04_Module_90039" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<form></form>
+						<div class="container">
+                            <div id="breadcrumbs">
+								<div class="breadcrumb">
+									<a href="/">Home</a>
+                                    --->
+                                    <a href="/overview">Overview</a>
+                                    --->
+									<a href="/espupdates/console">Developer Console</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="span9">
+									<h1 id="title">ESPUpdates Developer Console</h1>
+								</div>
+								<div class="span3 ar">
+									<a class="listMethod" href="javascript:void(0);">List Methods</a> | <a class="expandMethod" href="javascript:void(0);">Expand Methods</a>
+								</div>
+							<!--</div><h3>Application Credentials</h3>-->
+							<!--<div class="well form-inline">-->
+								<!--<div class="row">-->
+									<!--<div class="span5">
+										<label>User ID / API Key: </label>
+										<input type="text" id="userID" class="span3 required" name="userID" />
+									</div>
+									<div class="span5">
+										<label>Password: </label>
+										<input type="text" id="userPass" class="span3 required" name="userPass" />
+									</div>-->
+								<!--</div>-->
+							</div>
+							<div class="content-main">
+								<div class="content">
+									<ul class="endpointList">
+										<li class="endpoint">
+											<h3>Products</h3>
+                                            <div id="divMessage" style="display: none;">Please wait ....</div>
+											<ul class="methodList">
+
+                                                <li class="method">
+													<span class="icon icon-lock"></span>
+													<form method="Post" action="/api/Login" class="form">
+														<div class="title gradient">
+															<span class="httpMethod">GET</span><span class="methodDisplayName">Login</span><span class="uri">/api/Login</span>
+														</div>
+														<div class="hidden">
+															<span class="mediaType">
+																<select id="Select2" class="format" name="format">
+																	<option value=".json">json</option><option value=".xml">xml </option>
+																</select></span><div class="description"></div>
+															<table class="apiList api-docs">
+																<thead>
+																	<tr>
+																		<th>Parameter</th><th>Value</th><th>Type</th><th>Description</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td class="name">ASI<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="text" id="Asi" class="required" name="Asi" />
+																		</td><td class="type">Int32</td><td class="description">ASI</td>
+																	</tr>
+                                                                    <tr>
+																		<td class="name">Username<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="text" id="Username" class="required" name="Username" />
+																		</td><td class="type">String</td><td class="description">Username</td>
+																	</tr>
+                                                                    <tr>
+																		<td class="name">Password<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="password" id="Password" class="required" name="Password" />
+																		</td><td class="type">String</td><td class="description">Password</td>
+																	</tr>
+																</tbody>
+															</table>
+															<button class="btn btn-primary" type="submit" id="invoke1" name="invoke1" value="1">
+																Try it!
+															</button>
+															<div class="spacer"></div>
+														</div>
+													</form>
+												</li>
+												<li class="method secure">
+													<span class="icon icon-lock"></span>
+													<form method="Post" action="/api/{companyId}/pid/{externalProductId}" class="form">
+														<div class="title gradient">
+															<span class="httpMethod">POST</span><span class="methodDisplayName">Post a Product</span><span class="uri">/api/{companyId}/pid/{externalProductId}</span>
+														</div>
+														<div class="hidden">
+															<span class="mediaType">
+																<select id="Select1" class="format" name="format">
+																	<option value=".json">json</option><option value=".xml">xml </option>
+																</select></span><div class="description"></div>
+															<table class="apiList api-docs">
+																<thead>
+																	<tr>
+																		<th>Parameter</th><th>Value</th><th>Type</th><th>Description</th>
+																	</tr>
+																</thead>
+																<tbody>
+                                                                    
+                                                                    <tr>
+																		<td class="name">Company Id<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="text" id="companyId" class="required" name="companyId" />
+																		</td><td class="type">Int32</td><td class="description">Company identifier</td>
+																	</tr>
+                                                                    <tr>
+																		<td class="name">Product Id<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="text" id="externalProductId" class="required" name="externalProductId" />
+																		</td><td class="type">Int32</td><td class="description">Product identifier</td>
+																	</tr>
+																	<tr>
+																		<td class="name">JSON Product Details<span class="isRequired">required</span></td><td class="parameter">
+                                                                            <TEXTAREA NAME="pjson" id="pjson" style="width:550px;height:150px;" class="required" ></TEXTAREA>
+																		<!--<input type="text" id="pid" class="required" style="width:550px;height:150px;"  name="pid"  />-->
+																		</td><td class="type">Int32</td><td class="description">Product Details</td>
+																	</tr>
+                                                                 
+																</tbody>
+
+															</table>
+															<button class="btn btn-primary" type="submit" id="invoke2" name="invoke2" value="2">
+																Try it!
+															</button>
+															<div class="spacer"></div>
+														</div>
+													</form>
+												</li>
+												<li class="method secure">
+													<span class="icon icon-lock"></span>
+													<form method="Get" action="/api/{companyId}/pid/{externalProductId}" class="form">
+														<div class="title gradient">
+															<span class="httpMethod">GET</span><span class="methodDisplayName">Search a Product</span><span class="uri">/api/{companyId}/pid/{externalProductId}</span>
+														</div>
+														<div class="hidden">
+															<span class="mediaType">
+																<select id="RetrieveHandler_Get_format" class="format" name="format">
+																	<option value=".json">json</option><option value=".xml">xml </option>
+																</select></span><div class="description"></div>
+															<table class="apiList api-docs">
+																<thead>
+																	<tr>
+																		<th>Parameter</th><th>Value</th><th>Type</th><th>Description</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	
+                                                                    <tr>
+																		<td class="name">Company Id<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="text" id="companyId" class="required" name="companyId" />
+																		</td><td class="type">Int32</td><td class="description">Company identifier</td>
+																	</tr>
+                                                                    <tr>
+																		<td class="name">Product Id<span class="isRequired">required</span></td><td class="parameter">
+																		<input type="text" id="externalProductId" class="required" name="externalProductId" />
+																		</td><td class="type">Int32</td><td class="description">Product identifier</td>
+																	</tr>
+																</tbody>
+
+															</table>
+                                                            
+															<button class="btn btn-primary" type="submit" id="invoke3" name="invoke3" value="3">
+																Try it!
+															</button>
+															<div class="spacer"></div>
+														</div>
+													</form>
+												</li>
+                                                <li class="method secure">
+													<span class="icon icon-lock"></span>
+													<form method="Get" action="/resources/lookup/{category}" class="form">
+														<div class="title gradient">
+															<span class="httpMethod">GET</span><span class="methodDisplayName">Retrieve Lookup data</span><span class="uri">lookup/{category}</span>
+														</div>
+														<div class="hidden">
+															<span class="mediaType">
+																<select id="Select3" class="format" name="format">
+																	<option value=".json">json</option><option value=".xml">xml </option>
+																</select></span><div class="description"></div>
+															<table class="apiList api-docs">
+																<thead>
+																
+																</thead>
+																<tbody>
+																	
+                                                                    <tr>
+																		<td class="name">Criterias<span class="isRequired">required</span></td><td class="parameter">
+																	<select id="category" class="category" name="category">
+                                                                          <option value="categoriesList">Categories</option>
+                                                                          <option value="themes">Theme</option>
+                                                                        </select> 
+																		
+																	</tr>
+                                                                  
+																</tbody>
+
+															</table>
+															<button class="btn btn-primary" type="submit" id="invoke4" name="invoke4" value="4">
+																Try it!
+															</button>
+															<div class="spacer"></div>
+														</div>
+													</form>
+												</li>
+											</ul>
+										</li>
+										
+								
+									</ul>
+								</div>
+							</div>
+						</div>
+						<script type="text/javascript">
+							$(document).ready(function() {
+								$('form').each(function() {
+									$(this).validate({
+										submitHandler : function(form) {
+											return fixAction(form);
+										}
+									});
+								});
+								$('.title').bind('click', function() {
+									$(this).next('.hidden').slideToggle();
+								});
+								$('.listMethod').bind('click', function() {
+									$('.hidden').slideUp();
+								});
+								$('.expandMethod').bind('click', function() {
+									$('.hidden').slideDown();
+								});
+							});
+
+						</script>
+					</div>
+				</div>
+				<div id="ctl04_Module_87079" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="clear"></div>
+						<div class="subFooter styled clearfix">
+							<div class="container">
+								<div class="row">
+									<div class="span3">
+										<h5>Have questions?</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/customersupport/productsupport/logomall.aspx">Product Support</a>
+											</li>
+											<li>
+												<a href="mailto:support@asicentral.com?subject=Feedback">Feedback</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>ASI Store</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=135">ESP Web</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=138">ESP Orders</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=4">LogoMall</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=18">CreditConnect</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore">more &gt;</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Community</h5>
+										<ul>
+											<li>
+												<a href="http://asicentral.com/">ASI Central</a>
+											</li>
+											<li>
+												<a href="http://timandrewsblog-asicentral.com/timblog/">Tim Andrews Blog</a>
+											</li>
+											<li>
+												<a href="http://www.facebook.com/pages/ASICentral/55248546043">ASI Facebook</a>
+											</li>
+											<li>
+												<a href="http://www.youtube.com/user/asicentral">ASI YouTube</a>
+											</li>
+											<li>
+												<a href="http://twitter.com/asicentral">ASI Twitter</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Company</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/default.aspx">About ASI</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/pressRoom/default.aspx">Press Releases</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/asicareers/default.aspx">ASI Careers</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/CustomerSupport/support.aspx">Contact Us</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="copyright clearfix">
+									<div class="span6">
+										<span class="asiLogo"></span>
+									</div>
+									<div class="span6 alignRight copy">
+										2012, Advertising Specialty Institute&reg;. All rights reserved.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		
+	</body>
+</html>

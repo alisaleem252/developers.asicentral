@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title> ASI Developers - Authentication &amp; Authorization</title>
+		<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+ 		<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Images/favicon/ESPS.ico")">
+      
+	</head>
+	<body>
+		<form name="form1" method="post" id="form1">
+			<div id="ctl04_MainZone" class="mainWrapper">
+				<div id="ctl04_Module_87147" class="asiModule AppToolbarLite" ismodule="True">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<a href="/" class="brand"><strong>asi</strong>developers</a>
+                                <div id="menulist"></div>
+								<ul class="nav support pull-right">
+									<li><span id="ctl04_ctl00_lblSupport">Product Support (800) 546-1350, option 2</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ctl04_Module_87890" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="container">
+							<div id="breadcrumbs">
+								<div class="breadcrumb">
+									 <a href="/">Home</a>
+                                    --->
+                                    <a href="/overview">Overview</a>
+                                    --->
+									<a href="/smartlink/auth">Authentication</a>
+								</div>
+							</div>
+							<div id="quickjump_api"></div>
+							<h1 id="title">Authentication &amp; Authorization</h1>
+							<div class="content-main">
+								<div class="view api-docs">
+									<div class="content">
+										<div class="row">
+											<div class="span9">
+												<div class="doc-updated">
+													Updated on Fri, 2012-03-23
+												</div>
+												<p>
+													In order to make authorized calls to ASI's APIs, you must register an application with ASI.  Once you have an application id and secret, follow the steps described for Authorizing a request.
+												</p>
+												<br>
+												<h3>Authorizing a request</h3>
+												<p>
+													All of ASI's APIs are based on the HTTP protocol. This means that any software you write which uses ASI's APIs sends a series of structured messages to ASI's servers. For example:
+												</p>
+												<pre>GET /v1/lists/news.json HTTP/1.1
+Accept:	*/*
+Connection: close
+Host: api.asicentral.com
+User-Agent: Mozilla/5.0 (Windows NT 6.2; rv:9.0.1) Gecko/20100101 Firefox/9.0.1
+Authorization: AsiMemberAuth client_id=17828&client_secret=6b0d16dd019affe67e046c4ce264b2b2</pre>
+												<br>
+												<h3>Parameters</h3>
+												<p>The authorization header containers 2 key/value pairs, where the keys all begin with the string "client_".  For any authorized API request, you will need to provide these two values to specify authorization for the request.</p>
+												<p><strong>Id</strong><br>The <tt>client_id</tt> identifies which application is making the request.</p>
+												<p><strong>Secret</strong><br>The <tt>client_secret</tt> is a unique token generated for your application.</p>
+												<br>
+												<h3>Building the header string</h3>
+												<p>
+													To build the header string, imagine writing to a string named authString.
+												</p>
+												<ol>
+													<li>
+														Append the string "AsiMemberAuth " (including the space at the end) to authString.
+													</li>
+													<li>
+														For each key/value pair of the 2 parameters listed above:
+														<ol>
+															<li>
+																Append the key to authString.
+															</li>
+															<li>
+																Append the equals character '=' to authString.
+															</li>
+															<li>
+																Append the value to authString.
+															</li>
+															<li>
+																If there are key/value pairs remaining, append an ampersand '&amp;' authString.
+															</li>
+														</ol>
+													</li>
+												</ol>
+												<p>
+													Performing these steps on the parameters collected above results in the following string:
+												</p>
+												<pre>AsiMemberAuth client_id=17828&client_secret=6b0d16dd019affe67e046c4ce264b2b2</pre>
+												<p>
+													This value should be set as the <tt>Authorization</tt> header for the request.
+												</p>
+												<div id="disqus_thread"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ctl04_Module_87079" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="clear"></div>
+						<div class="subFooter styled clearfix">
+							<div class="container">
+								<div class="row">
+									<div class="span3">
+										<h5>Have questions?</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/customersupport/productsupport/logomall.aspx">Product Support</a>
+											</li>
+											<li>
+												<a href="mailto:support@asicentral.com?subject=Feedback">Feedback</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>ASI Store</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=135">ESP Web</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=138">ESP Orders</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=4">LogoMall</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=18">CreditConnect</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore">more &gt;</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Community</h5>
+										<ul>
+											<li>
+												<a href="http://asicentral.com/">ASI Central</a>
+											</li>
+											<li>
+												<a href="http://timandrewsblog-asicentral.com/timblog/">Tim Andrews Blog</a>
+											</li>
+											<li>
+												<a href="http://www.facebook.com/pages/ASICentral/55248546043">ASI Facebook</a>
+											</li>
+											<li>
+												<a href="http://www.youtube.com/user/asicentral">ASI YouTube</a>
+											</li>
+											<li>
+												<a href="http://twitter.com/asicentral">ASI Twitter</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Company</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/default.aspx">About ASI</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/pressRoom/default.aspx">Press Releases</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/asicareers/default.aspx">ASI Careers</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/CustomerSupport/support.aspx">Contact Us</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="copyright clearfix">
+									<div class="span6">
+										<span class="asiLogo"></span>
+									</div>
+									<div class="span6 alignRight copy">
+										2012, Advertising Specialty Institute&reg;. All rights reserved.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript" src="/js/smartlink/developers_scripts.js"></script>
+	</body>
+</html>

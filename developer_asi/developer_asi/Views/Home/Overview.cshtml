@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title> ASI Developers - Documentation</title>
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		
+		<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+       
+		<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+        @*<script type="text/javascript" src="@Url.Content("~/Scripts/smartlink/developers_scripts.js")"></script>*@
+         <script type="text/javascript" src="@Url.Content("~/Scripts/smartlink/developers_scripts.js")"></script>
+		
+		<link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Images/favicon/ESPS.ico")">
+	</head>
+	<body>
+		<form name="form1" method="post" id="form1">
+			<div id="ctl04_MainZone" class="mainWrapper">
+				<div id="ctl04_Module_87147" class="asiModule AppToolbarLite" ismodule="True">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<a href="/" class="brand"><strong>asi</strong>developers</a>
+                                <div id="menulist"></div>
+								<ul class="nav support pull-right">
+									<li><span id="ctl04_ctl00_lblSupport">Product Support (800) 546-1350, option 2</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+             
+                  
+                    <div class="container">
+                          <div class="breadcrumb">
+									<a href="/">Home</a>
+                                    --->
+                                    <a href="/overview">Overview</a>
+								</div>
+                
+                        </div>
+                  
+				<div id="ctl04_Module_87326" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="container">
+							<h2 id="title">Overview</h2>
+							<div class="content-main">
+								<div class="content">
+									<h3 id="title1">SmartLink API</h3>
+                                    <p>Provides a simple interface for most ESP functionality. Allows you to get lists, final products and suppliers, and retrieve images from ASI's CDN.</p>
+                                    <ul class="sub-breadcrumb">
+                                            <li>
+                                                @Html.ActionLink("Setting up an Account", "Setup", "Smartlink")
+												
+											</li>
+                                            <li>
+                                                @Html.ActionLink("Authentication & Authorization", "Auth", "Smartlink")
+												
+											</li>
+											<li>
+                                                @Html.ActionLink("API Resources", "Api", "Smartlink")
+												
+											</li>
+                                             <li>
+                                                 @Html.ActionLink("Error Codes & Responses", "ErrorCode", "Smartlink")
+												
+											</li>
+                                            <li>
+                                                @Html.ActionLink("Developer Console", "Console", "Smartlink")
+												
+											</li>
+										</ul>
+                                    <br />
+                                    <h3 id="H1">ESP Updates API</h3>
+                                    <p>The ESP Updates API gives supplier members the ability to quickly and easily update their products & prices directly from their own product data repository to the ASI master database. This minimizes human error and improves the accuracy and speed of when product data are updated in ASI platforms and ESP applications.</p>
+                                    <ul class="sub-breadcrumb">
+											<li>
+                                                @Html.ActionLink("Setting up an Account", "Setup", "EspUpdates")
+												
+											</li>
+											<li>
+                                                @Html.ActionLink("API Resources", "Api", "EspUpdates")
+												
+											</li>
+                                            <li>
+                                                @Html.ActionLink("Data Definitions", "DataDefinition", "EspUpdates")
+												
+											</li>
+                                            <li>
+                                                @Html.ActionLink("Look-up Tables", "Lookup", "EspUpdates")
+												
+											</li>
+                                             <li>
+                                                 @Html.ActionLink("Error Codes & Responses", "ErrorCode", "EspUpdates")
+												
+											</li>
+                                            <li>
+                                                @Html.ActionLink("Developer Console", "Console", "EspUpdates")
+												
+											</li>
+										</ul>
+                                    <br />
+                                    <h3 id="H2">Connect</h3>
+                                    <p>Connect API</p>
+                                    <ul class="sub-breadcrumb">
+                                        <li>
+                                                @Html.ActionLink("Resources Documentation", "Api", "Connect")
+												
+											</li>
+											<li>
+												 @Html.ActionLink("Authentication", "Auth", "Connect")
+											</li>
+                                            <li>
+												 @Html.ActionLink("Error Codes & Responses", "ErrorCode", "Connect")
+                                        	</li>
+                                            <li>
+                                                @Html.ActionLink("Developer Console", "Console", "Connect")
+		    								</li>
+							
+										</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ctl04_Module_87079" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="clear"></div>
+						<div class="subFooter styled clearfix">
+							<div class="container">
+								<div class="row">
+									<div class="span3">
+										<h5>Have questions?</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/customersupport/productsupport/logomall.aspx">Product Support</a>
+											</li>
+											<li>
+												<a href="mailto:support@asicentral.com?subject=Feedback">Feedback</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>ASI Store</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=135">ESP Web</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=138">ESP Orders</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=4">LogoMall</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=18">CreditConnect</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore">more &gt;</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Community</h5>
+										<ul>
+											<li>
+												<a href="http://asicentral.com/">ASI Central</a>
+											</li>
+											<li>
+												<a href="http://timandrewsblog-asicentral.com/timblog/">Tim Andrews Blog</a>
+											</li>
+											<li>
+												<a href="http://www.facebook.com/pages/ASICentral/55248546043">ASI Facebook</a>
+											</li>
+											<li>
+												<a href="http://www.youtube.com/user/asicentral">ASI YouTube</a>
+											</li>
+											<li>
+												<a href="http://twitter.com/asicentral">ASI Twitter</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Company</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/default.aspx">About ASI</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/pressRoom/default.aspx">Press Releases</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/asicareers/default.aspx">ASI Careers</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/CustomerSupport/support.aspx">Contact Us</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="copyright clearfix">
+									<div class="span6">
+										<span class="asiLogo"></span>
+									</div>
+									<div class="span6 alignRight copy">
+										2012, Advertising Specialty Institute&reg;. All rights reserved.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+        
+		</body>
+</html>

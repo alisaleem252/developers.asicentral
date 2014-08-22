@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title> ASI Developers - Error Codes & Responses</title>
+		<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+ 		<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/prettify.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/connect/developers_scripts.js")"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Images/favicon/ESPS.ico")">
+	</head>
+	<body>
+		<form name="form1" method="post" id="form1">
+			<div id="ctl04_MainZone" class="mainWrapper">
+				<div id="ctl04_Module_87147" class="asiModule AppToolbarLite" ismodule="True">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<a href="/" class="brand"><strong>asi</strong>developers</a>
+                                <div id="menulist"></div>
+								<ul class="nav support pull-right">
+									<li><span id="ctl04_ctl00_lblSupport">Product Support (800) 546-1350, option 2</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div ismodule="True" class="asiModule ContentLight" id="ctl04_Module_91748">
+					<div>
+						<div class="container">
+							<div id="breadcrumbs">
+								<div class="breadcrumb">
+									<a href="/">Home</a>
+                                    --->
+                                    <a href="/overview">Overview</a>
+                                    --->
+									<a href="/smartlink/error_codes_responses">Error Codes</a>
+								</div>
+							</div>
+							<div id="quickjump_api"></div>
+							<h1 id="title">Error Codes &amp; Responses</h1>
+							<div class="content-main">
+								<div class="view api-docs">
+									<div class="content">
+										<!-- Authentication --><a id="authentication"></a><h3>HTTP Status Codes</h3>
+										<p>
+											The API attempts to return appropriate <a rel="nofollow" target="_blank" class="ext" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status codes</a> for every request
+										</p>
+										<table class="apiList">
+											<thead>
+												<tr>
+													<th width="30%">Code</th><th width="30%">Text</th><th width="40%">Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>200</th><td>OK</td><td>Success!</td>
+												</tr>
+												<tr>
+													<th>304</th><td>Not Modified</td><td>There was no new data to return.</td>
+												</tr>
+												<tr>
+													<th>400</th><td>Bad Request</td><td>The request was invalid.  An accompanying error message will explain why.</td>
+												</tr>
+												<tr>
+													<th>401</th><td>Unauthorized</td><td><a href="/connect/auth">Authentication credentials</a> were missing or incorrect.</td>
+												</tr>
+												<tr>
+													<th>403</th><td>Forbidden</td><td> The request is understood, but it has been refused.  An accompanying error message will explain why.</td>
+												</tr>
+												<tr>
+													<th>404</th><td>Not Found</td><td>The URI requested is invalid or the resource requested, such as a user, does not exists.</td>
+												</tr>
+                                                <tr>
+													<th>422</th><td>Company Not Found</td><td>Company details are not found or does not exists.</td>
+												</tr>
+												<tr>
+													<th>500</th><td>Internal Server Error</td><td>Something is broken.  Please e-mail <a href="mailto:support@asicentral.com">support</a> so the ASI team can investigate.</td>
+												</tr>
+												<tr>
+													<th>502</th><td>Bad Gateway</td><td>Service is down or being upgraded.</td>
+												</tr>
+												<tr>
+													<th>503</th><td>Service Unavailable</td><td>The servers are up, but overloaded with requests. Try again later.</td>
+												</tr>
+											</tbody>
+										</table>
+										<h3>Error Messages</h3>
+										<p>
+											When the ASI Developers API returns error messages, it does so in your requested format. For example, an error from a JSON method might look like this:
+										</p>
+										<pre class="prettyprint linenums errors-json"></pre>
+										<p>
+												The corresponding XML response would be:
+										</p>
+										<pre class="prettyprint linenums errors-xml"></pre>
+									</div>
+									<div id="disqus_thread"></div>
+								</div>
+							</div>
+						</div>
+						<link type="text/css" rel="stylesheet" href="/css/prettify.css">
+						<script type="text/javascript">
+							$(document).ready(function() {
+							    $('.errors-json').html(formatJson(JSON.stringify(JSON.parse('{"readyState": 4, "responseText": "{\\\"Error\\\":\\\"Company not found\\\"}", "status": 422, "statusText": "Not Found"}'))));
+								$('.errors-xml').html(formatXml('<Exception xmlns:xs="http://www.w3.org/2001/XMLSchema"><Error>Company not found</Error></Exception>'));
+								prettyPrint();
+							});
+						</script>
+					</div>
+				</div>
+				<div id="ctl04_Module_87079" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="clear"></div>
+						<div class="subFooter styled clearfix">
+							<div class="container">
+								<div class="row">
+									<div class="span3">
+										<h5>Have questions?</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/customersupport/productsupport/logomall.aspx">Product Support</a>
+											</li>
+											<li>
+												<a href="mailto:support@asicentral.com?subject=Feedback">Feedback</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>ASI Store</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=135">ESP Web</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=138">ESP Orders</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=4">LogoMall</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=18">CreditConnect</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore">more &gt;</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Community</h5>
+										<ul>
+											<li>
+												<a href="http://asicentral.com/">ASI Central</a>
+											</li>
+											<li>
+												<a href="http://timandrewsblog-asicentral.com/timblog/">Tim Andrews Blog</a>
+											</li>
+											<li>
+												<a href="http://www.facebook.com/pages/ASICentral/55248546043">ASI Facebook</a>
+											</li>
+											<li>
+												<a href="http://www.youtube.com/user/asicentral">ASI YouTube</a>
+											</li>
+											<li>
+												<a href="http://twitter.com/asicentral">ASI Twitter</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Company</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/default.aspx">About ASI</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/pressRoom/default.aspx">Press Releases</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/asicareers/default.aspx">ASI Careers</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/CustomerSupport/support.aspx">Contact Us</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="copyright clearfix">
+									<div class="span6">
+										<span class="asiLogo"></span>
+									</div>
+									<div class="span6 alignRight copy">
+										2012, Advertising Specialty Institute&reg;. All rights reserved.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript" src="/js/connect/developers_scripts.js"></script>
+	</body>
+</html>

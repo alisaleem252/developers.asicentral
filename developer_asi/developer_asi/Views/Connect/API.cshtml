@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title> ASI Developers - REST API Resources</title>
+				<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+ 		<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/connect/developers_scripts.js")"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Images/favicon/ESPS.ico")">
+
+	</head>
+	<body>
+		<form name="form1" method="post" id="form1">
+			<div id="ctl04_MainZone" class="mainWrapper">
+				<div id="ctl04_Module_87147" class="asiModule AppToolbarLite" ismodule="True">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<a href="/" class="brand"><strong>asi</strong>developers</a>
+                                <div id="menulist"></div>
+								<ul class="nav support pull-right">
+									<li><span id="ctl04_ctl00_lblSupport">Product Support (800) 546-1350, option 2</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ctl04_Module_86328" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="container">
+							<div id="breadcrumbs">
+								<div class="breadcrumb">
+                                    <a href="/">Home</a>
+                                    --->
+                                    <a href="/overview">Overview</a>
+                                    --->
+									<a href="/smartlink/api">Resources</a>
+								</div>
+							</div><div id="quickjump_api"></div><h1 id="title">Connect API Resources</h1>
+							<div class="content-main">
+								<div class="view api-docs">
+									<div class="content">
+										
+										<!-- Products --><a id="summary"></a><h3>Credit Summary</h3>
+										<p>
+											This method will allow you to retrieve a Credit Summary.
+										</p>
+										<table class="apiList">
+											<thead>
+												<tr>
+													<th width="35%">Resource</th><th width="65%">Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>@Html.ActionLink("GET creditsummary?ASINumber={id}", "GetCreditSummary", "Connect")</td><td>Retrieve Credit Summary based on ASI number.</td>
+												</tr>
+												
+											</tbody>
+										</table>
+										<!-- Suppliers --><a id="report"></a><h3>Credit Report</h3>
+										<p>
+											This method will allow you to retrieve a Credit Report.
+										</p>
+										<table class="apiList">
+											<thead>
+												<tr>
+													<th width="35%">Resource</th><th width="65%">Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>@Html.ActionLink("GET creditreport?ASINumber={id}", "GetCreditReport", "Connect")</td><td>Retrieve Credit Report based on ASI number.</td>
+                                                    
+												</tr>
+                                               
+											</tbody>
+										</table>
+                            		</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ctl04_Module_87079" class="asiModule ContentLight" IsModule="True">
+					<div>
+						<div class="clear"></div>
+						<div class="subFooter styled clearfix">
+							<div class="container">
+								<div class="row">
+									<div class="span3">
+										<h5>Have questions?</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/customersupport/productsupport/logomall.aspx">Product Support</a>
+											</li>
+											<li>
+												<a href="mailto:support@asicentral.com?subject=Feedback">Feedback</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>ASI Store</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=135">ESP Web</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=138">ESP Orders</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=4">LogoMall</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore/products.aspx?prodID=18">CreditConnect</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/ASIStore">more &gt;</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Community</h5>
+										<ul>
+											<li>
+												<a href="http://asicentral.com/">ASI Central</a>
+											</li>
+											<li>
+												<a href="http://timandrewsblog-asicentral.com/timblog/">Tim Andrews Blog</a>
+											</li>
+											<li>
+												<a href="http://www.facebook.com/pages/ASICentral/55248546043">ASI Facebook</a>
+											</li>
+											<li>
+												<a href="http://www.youtube.com/user/asicentral">ASI YouTube</a>
+											</li>
+											<li>
+												<a href="http://twitter.com/asicentral">ASI Twitter</a>
+											</li>
+										</ul>
+									</div>
+									<div class="span3">
+										<h5>Company</h5>
+										<ul>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/default.aspx">About ASI</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/AboutASI/pressRoom/default.aspx">Press Releases</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/asicareers/default.aspx">ASI Careers</a>
+											</li>
+											<li>
+												<a href="http://www.asicentral.com/asp/open/CustomerSupport/support.aspx">Contact Us</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="copyright clearfix">
+									<div class="span6">
+										<span class="asiLogo"></span>
+									</div>
+									<div class="span6 alignRight copy">
+										2012, Advertising Specialty Institute&reg;. All rights reserved.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		</body>
+</html>
